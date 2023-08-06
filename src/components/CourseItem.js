@@ -15,6 +15,7 @@ const CourseItem = (props) => {
           <span className="course-list-quantity">{quantity}</span>
           <button className="btn-decrease">-</button>
         </div>
+        <button className="btn-delete">Sil</button>
       </div>
     </div>
   );

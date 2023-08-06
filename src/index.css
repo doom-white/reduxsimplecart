@@ -42,6 +42,11 @@
   font-weight: bold;
 }
 
+section {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .course-list {
   display: flex;
   align-items: center;
@@ -77,7 +82,6 @@
 }
 
 .course-list-rightSide p {
-  margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -87,6 +91,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .btn-increase,
@@ -109,6 +114,23 @@
   background: rgba(218, 50, 84, 0.89);
 }
 
+.btn-delete {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  color: rgba(218, 50, 84, 0.89);
+  text-decoration: line-through;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-delete:hover {
+  transform: scale(1.2);
+}
+
 .course-list-quantity {
   font-weight: bolder;
   margin: 15px 0;
@@ -117,8 +139,10 @@
 .course-list-footer {
   padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 45px;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .course-list-footer button {
