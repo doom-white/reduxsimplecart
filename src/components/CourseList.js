@@ -1,9 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CourseItem from "./CourseItem";
+import { clearCart } from "../features/cart/cartSlice";
 
 const CourseList = () => {
   const { cartItems, quantity, total } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -28,7 +30,7 @@ const CourseList = () => {
         <h1>
           Toplam tutar = <span>{total} ₺</span>
         </h1>
-        <button>Temizle</button>
+        <button onClick={() => dispatch(clearCart())}>Temizle</button>
       </footer>
     </>
   );

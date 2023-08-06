@@ -1,7 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import {
+  decreaseItemCount,
+  increaseItemCount,
+  removeItem,
+} from "../features/cart/cartSlice";
 
 const CourseItem = (props) => {
-  const { img, price, quantity, title } = props;
+  const { id, img, price, quantity, title } = props;
+  const dispatch = useDispatch();
   return (
     <div className="course-list">
       <div className="course-list-leftSide">
@@ -11,11 +18,23 @@ const CourseItem = (props) => {
       <div className="course-list-rightSide">
         <p>{price} ₺</p>
         <div className="course-list-control">
-          <button className="btn-increase">+</button>
+          <button
+            className="btn-increase"
+            onClick={() => dispatch(increaseItemCount(id))}
+          >
+            +
+          </button>
           <span className="course-list-quantity">{quantity}</span>
-          <button className="btn-decrease">-</button>
+          <button
+            className="btn-decrease"
+            onClick={() => dispatch(decreaseItemCount(id))}
+          >
+            -
+          </button>
         </div>
-        <button className="btn-delete">Sil</button>
+        <button className="btn-delete" onClick={() => dispatch(removeItem(id))}>
+          Sil
+        </button>
       </div>
     </div>
   );
