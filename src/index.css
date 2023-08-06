@@ -3,3 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.navbar {
+  background: blue;
+  color: white;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+}
+
+.navbar-cart {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.navbar-cart-count {
+  width: 100%;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -13px;
+  right: -15px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-cart-count p {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
