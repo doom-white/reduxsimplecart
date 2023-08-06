@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
@@ -39,4 +40,99 @@
   color: black;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.course-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+.course-list-leftSide {
+  position: relative;
+}
+
+.course-list-leftSide img {
+  width: 600px;
+  height: 350px;
+}
+
+.course-list-leftSide p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.course-list-rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+.course-list-rightSide p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.course-list-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-increase,
+.btn-decrease {
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-increase {
+  background: rgba(0, 102, 255, 0.795);
+}
+
+.btn-decrease {
+  background: rgba(218, 50, 84, 0.89);
+}
+
+.course-list-quantity {
+  font-weight: bolder;
+  margin: 15px 0;
+}
+
+.course-list-footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.course-list-footer button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(223, 78, 107, 0.904);
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.course-list-footer button:hover {
+  background: rgba(224, 46, 81, 0.904);
 }
